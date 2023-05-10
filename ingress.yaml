@@ -34,3 +34,10 @@ spec:
             name: trainings-service
             port:
               name: trainings-svc
+      - path: /goals
+        pathType: Prefix
+        backend:
+          service:
+            name: goals-service
+            port:
+              name: goals-svc
