@@ -8,11 +8,19 @@ metadata:
     tier: fiufit-ingress
   annotations:
     dev.okteto.com/generate-host: "true"
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: fiufit-ingress
   rules:
   - http:
       paths:
+      - path: /users/.*/trainings
+        pathType: Prefix
+        backend:
+          service:
+            name: trainings-service
+            port:
+              name: trainings-svc
       - path: /users
         pathType: Prefix
         backend:
