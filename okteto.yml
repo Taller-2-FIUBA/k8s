@@ -1,2 +1,2 @@
 deploy:
-  - kubectl apply -f ingress.yaml -n $NAMESPACE
+  - kubectl apply -f ingress.yaml
