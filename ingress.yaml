@@ -49,3 +49,10 @@ spec:
             name: goals-service
             port:
               name: goals-svc
+      - path: /metrics
+        pathType: Prefix
+        backend:
+          service:
+            name: metrics-service
+            port:
+              name: metrics-svc
